@@ -9,7 +9,7 @@ String value;
 // this will be the radius of our rectangle
 int rectSide = 100;
 // preparte 3 integer variables and set them all to 0 for starters.
-int temperature, soundlevel, potlevel = 0;
+float temperature, soundlevel, potlevel = 0;
 
 void setup(){
   // make a window of 1023px by 1023px
@@ -18,7 +18,7 @@ void setup(){
   // just to check which one we need to connect to
   printArray(Serial.list());
   // grab the right name from that list and make it our port name
-  String portName = Serial.list()[1];
+  String portName = Serial.list()[2];
   // set up our Serial object to belong to our sketch (this), to connect to the right port
   // and to communicate at baud 9600
   myPort = new Serial(this, portName, 9600);
@@ -44,8 +44,8 @@ void draw(){
     value = value.trim();
     // make an array of integers; split the String we received from the serial port ('value')
     // into chunks at the "TAB" symbols; convert the resulting chunks into integers
-    int mysensors[] = int(split(value, '\t'));
-    
+    float mysensors[] = float(split(value, '\t'));
+    printArray(mysensors);
     //make sure we have all 3 values
     if(mysensors.length == 3){
       //assign those values to the corrresponding variables
