@@ -24,4 +24,7 @@ void loop() {
     myServo.write(whateverWeGetFromProcessing.toInt());              // tell servo to go to position in variable 'pos'
     delay(15);
   }
+  else {
+    digitalWrite(ledPin, LOW);
+  }
 }

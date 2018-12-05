@@ -17,7 +17,7 @@ void setup(){
   
   myFont = createFont("Georgia", 32);
   printArray(Serial.list());
-  myPort = new Serial(this, Serial.list()[2], 9600);
+  myPort = new Serial(this, Serial.list()[0], 9600);
 }
 
 void draw(){
