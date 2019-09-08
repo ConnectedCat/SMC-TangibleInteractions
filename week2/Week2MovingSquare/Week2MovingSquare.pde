@@ -25,7 +25,12 @@ void setup(){
 }
 
 void draw(){
+  //one way to erase previous frames is to draw a rectangle in the beginning of each frame
+  //starting from 0 X and 0 Y point, and extending the whole width and height:
+  //rect(0, 0, width, height);
+  //but there is also a special function we could use:
   //set the background using 3 color values: Red, Green and Blue
+  //plugged into the special function relacing the need for the rectangle
   background(234, 98, 87);
   //the position of the rectanle (caltulated from its top left corner) 
   //plus its width gives us the right border of the rectangle
