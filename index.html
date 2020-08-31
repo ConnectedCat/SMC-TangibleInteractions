@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tangible Interactions overview</title>
+    <style>
+        :root {
+            font-size: 12px;
+        }
+
+        html {
+            background-color: rgb(201, 226, 112);
+        }
+
+        body {
+            width: 100%;
+            margin: 0px auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        header {
+            margin: 3rem;
+            text-align: center;
+        }
+
+        .flexbox {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 1rem;
+        }
+
+        .week {
+            background-color: #99eac8;;
+            border-bottom-left-radius: 3rem;
+            border-top-right-radius: 3rem;
+            padding: 1rem 2rem 3rem 2rem;
+        }
+
+        .grid h2 {
+            grid-column: 1 / -1;
+            background-color: #bf8bea;
+            padding: 2rem;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .week ul li {
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                width: 768px;
+            }
+
+            header {
+                text-align: right;
+                margin: 3rem 0;
+            }
+
+            .flexbox {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="flexbox">
+        <img src="https://www.smc.edu/_resources/assets/img/ou/logo-dark.svg">
+        <div class="greet">
+            <h1>Tangible Interactions</h1>
+            <h2>Maxim Safioulline</h2>
+        </div>
+    </header>
+
+    <main class="grid">
+        <div class="week">
+            <h3>Week 1</h3>
+            <ul>
+                <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vRarpZ9yZIu38KFL5ggJ9dmcKUNS2fvezP00iDmxcs1YsQyYhYyDBx8dXp1Xm26Nt2Ti1GvbTgRLArh/pub?start=false&loop=false&delayms=30000" target="_blank">Introduction to Principles of Computing slides</a></li>
+            </ul>
+
+        </div>
+        <div class="week">
+            <h3>Week 2: Move a thing</h3>
+            <ul>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week03/floater_grid" target="_blank">Source Code</a></li>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week03/in_class" target="_blank">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 3: Controlling Processing from Arduino</h3>
+            <ul>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week04/flexbox_layout" target="_blank">Source Code</a></li>
+                <li> <a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week04/in_class" target="_blank">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 4: Sending Multiple Values from Arduino</h3>
+            <ul>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week05/css_grid" target="_blank">Source Code</a></li>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week05/in_class" target="_blank">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 5: Mapping Values</h3>
+            <ul>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week06/css_centering" target="_blank">Source Code</a></li>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week06/in_class" target="_blank">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 6: Type and Color</h3>
+            <ul>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week06/css_centering" target="_blank">Source Code</a></li>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week06/in_class" target="_blank">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 7: Images and Linear Interpolation</h3>
+            <ul>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week06/css_centering" target="_blank">Source Code</a></li>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week06/in_class" target="_blank">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 8: Matrices and Rotation</h3>
+            <ul>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week06/css_centering" target="_blank">Source Code</a></li>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week06/in_class" target="_blank">In-class Code</a></li>
+            </ul>
+        </div>
+
+        <h2>Midterms!</h2>
+        
+        <div class="week">
+            <h3>Week 10: Buttoned Ramp</h3>
+            <ul>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week10/what_JS_can_do" target="_blank">Source Code</a></li>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week10/in_class" target="_blank">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 11: Color Buttons</h3>
+            <ul>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week11/collections_loops_timers" target="_blank">Source Code</a></li>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week11/in_class" target="_blank">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 12: Controlling Servos</h3>
+            <ul>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week12/intro_to_jQuery" target="_blank">Source Code</a></li>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week12/in_class" target="_blank">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 13: Text on LCD Screens</h3>
+            <ul>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week13/jQuery_UI" target="_blank">Source Code</a></li>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week13/in_class" target="_blank">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 14: Networked Communication</h3>
+            <ul>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week14/fancy_box" target="_blank">Source Code</a></li>
+                <li><a href="https://github.com/ConnectedCat/SMC_WebDesign2/tree/master/week14/in_class" target="_blank">In-class Code</a></li>
+            </ul>
+        </div>
+        <h2>Finals!</h2>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
