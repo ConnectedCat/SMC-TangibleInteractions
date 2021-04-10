@@ -34,24 +34,22 @@ void loop() {
 
   // Convert the temperature value to integer and send it via a serial port
   Serial.print(temperature);
-  // Send a TAB symbol for separation
+  // Send a comma for separation
   Serial.print("\t");
   
   // Read the value of the potentiometer and assign it to a variable called 'val'  
   val = analogRead(potentiometer);
-  // Send the 'val' and the TAB symbol down the serial port
+  // Send the 'val' containing the read value
   Serial.print(val);
-  Serial.print("\t");
+  // Send a comma for separation
+  Serial.print(",");
 
   // Read the value of the sound sensor and assign it to a variable called 'val'
   val = analogRead(sound_sensor);
-  // Send the 'val' and the TAB symbol down the serial port
-  Serial.print(val);
-  Serial.print("\t");
+  // Send the 'val' containing the read value using println which adds the End-Of-Line character to signify the end of transmission
+  Serial.println(val);
   // We'll read those values in Processing in the same order in which we sent them
 
-  // Send an empty line to the the End-Of-Line character to signify the end of transmission
-  Serial.println();
   // Take a breather for 100 milliseconds
   delay(100);
 }
