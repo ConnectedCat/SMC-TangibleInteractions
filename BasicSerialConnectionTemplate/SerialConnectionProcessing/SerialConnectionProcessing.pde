@@ -1,6 +1,14 @@
 import processing.serial.*; //import the serial library
 
-Serial myConnection; //create a variable for the connection
+//create a variable for the connection
+Serial myConnection; 
+
+// make a String container that we'll use to store the data from the Serial connection
+String incomingData;
+
+// make a variable that will store the number we recieve from the Serial connection
+// and apply it somewhere in the sketch
+float numberFromData;
 
 void setup(){
   //change window size as needed
@@ -8,28 +16,33 @@ void setup(){
   //this prints out the list of all Serial ports on your computer
   printArray( Serial.list() );
   
-  //find the port on your computer
-  //and put in the correct number here:
+  // grab the right name from that list and make it our port name
+  // it should match the name of the post that you Arduino board is connected to
+  // you can find it in Tools -> Port menu in Arduino IDE
   String portName = Serial.list()[0];
   
-  //create a serial connection and store it in the prepared variable
+  // set up our Serial object to connect our sketch (this) to the right port
+  // and to communicate at baud 9600
   myConnection = new Serial(this, portName, 9600);
 }
 
 void draw(){
-  //start by checking if connection is available
-  if(myConnection.available() > 0){
-    //read out the string of characters coming from the connection
-    //until the end of the line character is encountered
-    //store this string in the "value" variable
-    String value = myConnection.readStringUntil('\n');
-    
-    //check if there are characters in the "value"
-    if(value != null){
-      //convert the characters to a floating point number
-      //and store in "numValue" valiable
-      float numValue = float(value);
-      // use as needed below
-    }
+  // this shows how the number from data could be used to control the background color
+  background(numberFromData);
+}
+
+void serialEvent(Serial p) {
+  // we'll read the data we've been buffering and store it in a variable
+  // the data comes in as a string of characters
+  incomingData = p.readString(); 
+  
+  // here is some cleanup:
+  // let's make sure the value is not null
+  // it can happen if there is a communication error - we can disregard those errors
+  if( incomingData != null ){
+    // trim some possible white space junk, just in case
+    incomingData = incomingData.trim();
+    //convered the cleaned up data from a string of characters into a number
+    numberFromData = float(incomingData);
   }
 }
