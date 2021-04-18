@@ -23,7 +23,7 @@ void setup(){
   // it should match the name of the post that you Arduino board is connected to
   // you can find it in Tools -> Port menu in Arduino IDE
   String portName = Serial.list()[2];
-  // set up our Serial object to belong to our sketch (this), to connect to the right port
+  // set up our Serial object to connect our sketch (this) to the right port
   // and to communicate at baud 9600
   myPort = new Serial(this, portName, 9600);
   // we will be collecting all the incoming data from the serial connection into a buffer
